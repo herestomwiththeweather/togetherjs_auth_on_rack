@@ -31,7 +31,7 @@
     // Whether to use the minimized version of the code (overriding the built setting)
     useMinimizedCode: undefined,
     // Append cache-busting queries (useful for development!)
-    cacheBust: false,
+    cacheBust: true,
     // Any events to bind to
     on: {},
     // Hub events to bind to
@@ -146,8 +146,10 @@
   var version = "unknown";
   // FIXME: we could/should use a version from the checkout, at least
   // for production
-  var cacheBust = "__gitCommit__";
-  if ((! cacheBust) || cacheBust == "__gitCommit__") {
+  //var cacheBust = "__gitCommit__";
+  var cacheBust = "";
+  //if ((! cacheBust) || cacheBust == "__gitCommit__") {
+  if ((! cacheBust) || cacheBust == "") {
     cacheBust = Date.now() + "";
   } else {
     version = cacheBust;

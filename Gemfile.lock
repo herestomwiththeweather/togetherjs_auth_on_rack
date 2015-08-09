@@ -1,0 +1,47 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (4.0.13)
+      activesupport (= 4.0.13)
+      builder (~> 3.1.0)
+    activerecord (4.0.13)
+      activemodel (= 4.0.13)
+      activerecord-deprecated_finders (~> 1.0.2)
+      activesupport (= 4.0.13)
+      arel (~> 4.0.0)
+    activerecord-deprecated_finders (1.0.4)
+    activesupport (4.0.13)
+      i18n (~> 0.6, >= 0.6.9)
+      minitest (~> 4.2)
+      multi_json (~> 1.3)
+      thread_safe (~> 0.1)
+      tzinfo (~> 0.3.37)
+    arel (4.0.2)
+    bcrypt (3.1.10)
+    builder (3.1.4)
+    coderay (1.1.0)
+    i18n (0.7.0)
+    method_source (0.8.2)
+    minitest (4.7.5)
+    multi_json (1.11.2)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    rack (1.6.0)
+    rake (10.4.2)
+    slop (3.6.0)
+    sqlite3 (1.3.10)
+    thread_safe (0.3.5)
+    tzinfo (0.3.44)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activerecord (~> 4.0.0)
+  bcrypt
+  pry
+  rack
+  rake
+  sqlite3
