@@ -319,7 +319,9 @@ define(["require", "util", "channels", "jquery", "storage"], function (require, 
           }
           getRoomName(findRoom.prefix, findRoom.max).then(function (shareId) {
             // FIXME: duplicates code below:
-            session.clientId = session.identityId + "." + sessionId;
+            //session.clientId = session.identityId + "." + sessionId;
+            session.clientId = TogetherJSConfig_getUserId;
+            console.log('XXX (1) set clientId to ', session.clientId);
             storage.tab.set("status", {reason: "joined", shareId: shareId, running: true, date: Date.now(), sessionId: sessionId});
             session.isClient = true;
             session.shareId = shareId;
@@ -355,7 +357,9 @@ define(["require", "util", "channels", "jquery", "storage"], function (require, 
           throw new util.AssertionError("No saved status, and no startup._launch request; why did TogetherJS start?");
         }
         assert(session.identityId);
-        session.clientId = session.identityId + "." + sessionId;
+        //session.clientId = session.identityId + "." + sessionId;
+        session.clientId = TogetherJSConfig_getUserId;
+        console.log('XXX (2) set clientId to ', session.clientId);
         if (set) {
           storage.tab.set("status", {reason: TogetherJS.startup.reason, shareId: shareId, running: true, date: Date.now(), sessionId: sessionId});
         }

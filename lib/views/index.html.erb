@@ -1,7 +1,9 @@
 <html>
 <body>
 <script>
-  TogetherJSConfig_hubBase = 'http://192.168.1.104';
+  TogetherJSConfig_getUserName = '<%= @current_user.email %>';
+  TogetherJSConfig_getUserId = '<%= @current_user.id %>';
+  TogetherJSConfig_hubBase = 'http://ubuntu.local';
 </script>
 <div id="welcome">
   Hello <%= @current_user.email %>!!! <a href="/logout">Log out</a>

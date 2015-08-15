@@ -43,6 +43,7 @@ class Cyber
           if u
             puts "authentication succeeded!"
             @request.session[:user_id] = u.id
+            @request.session[:email] = u.email
             response.redirect('/')
           else
             response.redirect('/login')

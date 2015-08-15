@@ -22,6 +22,7 @@
     hubBase: null,
     // A function that will return the name of the user:
     getUserName: null,
+    getUserId: null,
     // A function that will return the color of the user:
     getUserColor: null,
     // A function that will return the avatar of the user:
